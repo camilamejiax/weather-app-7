@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import ReactDOM from "react-dom";
+import CityName from "./cityName";
+import SearchEngine from "./searchEngine";
+import Footer from "./footer";
+import Left from "./left";
+import Right from "./right";
 
-function App() {
+import "./styles.css";
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <div className="weather-app-wrapper">
+        <div className="weather-app">
+          <SearchEngine />
+
+          <CityName />
+
+          <div className="row">
+            <Left />
+            <Right />
+          </div>
+        </div>
+
+        <Footer />
+      </div>
     </div>
   );
 }
 
-export default App;
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
