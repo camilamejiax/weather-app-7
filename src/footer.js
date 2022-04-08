@@ -4,7 +4,7 @@ export default function footer() {
   return (
     <small>
       <a
-        href="https://github.com/camilamejiax/vanilla-weather-app"
+        href="https://github.com/camilamejiax/weather-app-7"
         target="_blank"
         rel="noreferrer"
       >
